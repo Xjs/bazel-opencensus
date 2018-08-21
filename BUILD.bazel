@@ -1,0 +1,13 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "default.go",
+    ],
+    importpath = "github.com/Xjs/bazel-opencensus",
+    visibility = ["//visibility:public"],
+    deps = [
+        "@io_opencensus_go//plugin/ocgrpc:go_default_library",
+    ],
+)
